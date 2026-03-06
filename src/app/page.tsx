@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -41,12 +42,13 @@ export default function Home() {
             >
               GatoPedia
             </h1>
-            <button
+            <Link
+              href="/cats"
               className="mt-1 rounded-full px-23 py-1 text-lg font-semibold text-white transition-opacity hover:opacity-80 shadow-md"
               style={{ backgroundColor: "#BFA080" }}
             >
               Iniciar
-            </button>
+            </Link>
           </div>
         </div>
 

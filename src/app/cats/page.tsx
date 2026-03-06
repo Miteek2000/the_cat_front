@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Cat } from '@/types/cat';
 import CatDetail from '@/components/CatDetail';
 import CatGrid from '@/components/catgrid';
@@ -76,6 +77,14 @@ export default function CatsPage() {
           <div className="absolute inset-0 bg-[#E7E7E7]/80" />
 
           <div className="relative z-10 flex flex-col h-full p-6 gap-4 overflow-hidden">
+            <div className="flex items-center gap-3">
+              <Link
+                href="/"
+                className="px-4 py-1 rounded-full text-sm font-medium text-white bg-[#BFA080] transition-opacity hover:opacity-80"
+              >
+                Inicio
+              </Link>
+            </div>
             <SearchBar value={search} onChange={setSearch} />
 
             <BreedList
