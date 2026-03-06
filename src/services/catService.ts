@@ -11,7 +11,7 @@ const headers = {
 
 export async function getCats(limit = 12): Promise<Cat[]> {
   const res = await fetch(
-    `${API_URL}/api/cats?limit=${limit}`,
+    `${API_URL}/api/cats?limit=${limit}&has_breeds=1`,
     { headers }
   );
   if (!res.ok) throw new Error("Error al obtener gatos");
