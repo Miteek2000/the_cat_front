@@ -9,7 +9,7 @@ import BreedList from '@/components/breedList';
 import LoadingSkeleton from '@/components/loadingSkeleton';
 import ErrorMessage from '@/components/ErrorMessage';
 
-const CAT_API = 'https://api.thecatapi.com/v1';
+const CAT_API = process.env.NEXT_PUBLIC_CAT_API_URL!;
 
 async function fetchCatsFromAPI(breedId?: string): Promise<Cat[]> {
   const url = breedId

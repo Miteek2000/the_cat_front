@@ -36,7 +36,7 @@ export default function CatDetail({ cat }: Props) {
     }
 
     setLoadingBreed(true);
-    fetch(`https://api.thecatapi.com/v1/images/${cat.id}`)
+    fetch(`${process.env.NEXT_PUBLIC_CAT_API_URL}/images/${cat.id}`)
       .then((r) => r.json())
       .then((data) => setBreed(data.breeds?.[0] ?? null))
       .catch(() => setBreed(null))
